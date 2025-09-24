@@ -164,8 +164,11 @@ const csv2 = "Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0
 parseAndLogCSV(csv2);
 
 /*
-  Quick test notes (for the grader / for me later):
-  - FizzBuzz: spot-check a few numbers (3 -> Fizz, 5 -> Buzz, 15 -> Fizz Buzz, 7 -> 7)
-  - Prime Time: tried 4,5,9,10,11 — matches the expected next primes
-  - CSV: first row has headers, then each row prints 4 cells in order
+  Test I tried  (for the grader / for me later):
+  - document.title, !!document.getElementById('out'), location.href
+  - [...document.scripts].map(s => s.src || '(inline)')
+  - runFizzBuzz();   
+  -nextPrimeAfter(4);   // expect 5
+  -nextPrimeAfter(5);   // expect 7
+  -isPrime(29); 
 */
