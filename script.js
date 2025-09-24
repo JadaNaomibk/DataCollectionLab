@@ -15,12 +15,13 @@ function logLine(msg) {
    PART 1: FIZZ BUZZ
    Reasoning:
    - plain for loop from 1..100
-   - use % to test divisibility
-   - I check (3 && 5) first so I don’t print two lines by accident
-   - using continue just to keep the ifs a little cleaner
+   - use % to divide and check remainders
+   - using continue just to keep the ifs a little cleaner, it jumps to the next iteration
+   - logLine() logs  to console and page
 ============================================================ */
 function runFizzBuzz() {
   logLine('--- Part 1: Fizz Buzz ---');
+
 
   for (let i = 1; i <= 100; i++) {
     const by3 = (i % 3 === 0);
@@ -48,10 +49,8 @@ function runFizzBuzz() {
 
 /* ============================================================
    PART 2: PRIME TIME
-   Notes to self:
-   - Beginner version: to check if a number p is prime, try dividing
+    to check if a number p is prime, try dividing
      by all numbers from 2 up to p-1. If anything divides evenly, not prime.
-   - This is not the fastest, but reads super clear and matches the assignment level.
 ============================================================ */
 function isPrime(p) {
   if (p <= 1) return false; // by definition, primes are > 1
@@ -63,10 +62,7 @@ function isPrime(p) {
   return true; // no divisors found
 }
 
-/*
-  I interpreted “next prime” as strictly greater than n.
-  So if n=5, we return 7 (not 5).
-*/
+
 function nextPrimeAfter(n) {
   let candidate = n + 1;
   while (true) { // will break by returning
@@ -150,7 +146,7 @@ function parseAndLogCSV(csv) {
 }
 
 /* ============================================================
-   Run everything (I like seeing it all at once first)
+   Run everything (I like seeing it all at once first and will use this method consistently.)
 ============================================================ */
 runFizzBuzz();
 runPrimeTime();
